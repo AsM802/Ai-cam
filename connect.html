@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect to Traffic Violation App</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 40px 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 700px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 32px;
+            text-align: center;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #4CAF50;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 14px;
+            margin-bottom: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .instructions {
+            background: #f9f9f9;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+
+        .instructions h2 {
+            color: #667eea;
+            margin-top: 0;
+            font-size: 20px;
+        }
+
+        .instructions ol {
+            padding-left: 25px;
+            line-height: 1.8;
+        }
+
+        .instructions li {
+            margin: 15px 0;
+            color: #555;
+        }
+
+        .url-note {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .url-note strong {
+            color: #856404;
+            font-size: 18px;
+        }
+
+        .url-note p {
+            margin: 10px 0 0 0;
+            color: #856404;
+        }
+
+        .step {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+
+        .step strong {
+            color: #667eea;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="badge">🚀 Tunnel Mode Active</div>
+        <h1>Traffic Violation App</h1>
+
+        <div class="url-note">
+            <strong>⚠️ QR Code Not Available</strong>
+            <p>Since the QR code isn't displaying, you'll need to manually enter the connection URL in Expo Go.</p>
+        </div>
+
+        <div class="instructions">
+            <h2>📱 How to Connect (Manual Method)</h2>
+
+            <div class="step">
+                <strong>Step 1:</strong> Install Expo Go on your phone
+                <ul>
+                    <li>Android: <a href="https://play.google.com/store/apps/details?id=host.exp.exponent"
+                            target="_blank">Download from Play Store</a></li>
+                    <li>iOS: <a href="https://apps.apple.com/app/expo-go/id982107779" target="_blank">Download from App
+                            Store</a></li>
+                </ul>
+            </div>
+
+            <div class="step">
+                <strong>Step 2:</strong> Open Expo Go app on your phone
+            </div>
+
+            <div class="step">
+                <strong>Step 3:</strong> Tap <strong>"Enter URL manually"</strong> in Expo Go
+            </div>
+
+            <div class="step">
+                <strong>Step 4:</strong> Look at your PowerShell terminal window where the server is running. You should
+                see a URL that looks like:
+                <ul>
+                    <li><code>exp://xx-xxx-xxx-xxx-xxx.ngrok-free.app:80</code></li>
+                    <li>Or something similar with "ngrok" in it</li>
+                </ul>
+            </div>
+
+            <div class="step">
+                <strong>Step 5:</strong> Copy that URL and paste it into Expo Go
+            </div>
+
+            <div class="step">
+                <strong>Step 6:</strong> Tap <strong>"Connect"</strong> and your app should load!
+            </div>
+        </div>
+
+        <div class="url-note">
+            <strong>💡 Can't find the URL?</strong>
+            <p>Check your PowerShell terminal - the tunnel URL should be displayed there. It will start with "exp://"
+                and contain "ngrok" in the address.</p>
+            <p>The tunnel works from <strong>any network</strong> - your phone doesn't need to be on the same WiFi!</p>
+        </div>
+    </div>
+</body>
+
+</html>
